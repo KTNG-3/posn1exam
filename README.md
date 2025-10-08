@@ -2,16 +2,27 @@
 
 ## Install
 
-**For Unix**
+**For Unix/Linux**
 
 ```bash
 npm install adm-zip fs-extra puppeteer
 ```
 
-**For Window**
+**For Windows 10/11**
 
 ```bash
 cmd /c "npm install adm-zip fs-extra puppeteer"
+```
+
+## Setup
+
+create `testhelper.user.json`
+
+```json
+{
+  "username": ""
+  "password": ""
+}
 ```
 
 ## Usage
