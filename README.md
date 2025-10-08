@@ -3,7 +3,7 @@
 ## Install
 
 ```bash
-npm install adm-zip
+npm install adm-zip fs-extra puppeteer
 ```
 
 ## Usage
