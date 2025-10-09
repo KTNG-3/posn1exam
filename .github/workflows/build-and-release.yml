@@ -1,0 +1,42 @@
+name: Build and Release
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    main-job:
+        runs-on: ubuntu-latest
+
+        steps:
+
+            -   name: Checkout
+                uses: actions/checkout@v5
+                with: 
+                    sparse-checkout: |
+                        package.json
+                        src/testhelper.ts
+                    sparse-checkout-cone-mode: false
+
+            -   name: Set up Node.js
+                uses: actions/setup-node@v5
+                with:
+                    node-version: 'lts/*'
+
+            -   name: Install dependencies
+                run: npm install
+
+            -   name: Build project
+                run: npm run build
+
+            -   name: Create Release
+                uses: softprops/action-gh-release@v2
+                with:
+                    draft: false
+                    prerelease: false
+                    files: |
+                        package.json
+                        src/testhelper.js
+                    name: ${{ github.event.head_commit.message }}
+                    token: ${{ secrets.GITHUB_TOKEN }}
