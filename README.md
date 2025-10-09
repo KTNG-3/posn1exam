@@ -1,32 +1,37 @@
 # posn1exam
 
+## Download
+
+download `testhelper.js` and `package.json` from the lastest release
+
+and place it in same folder
+
 ## Install
 
-**For Unix/Linux**
+**For Windows 10/11 Powershell**
 
-```bash
-npm install adm-zip fs-extra puppeteer
+```powershell
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 ```
 
-**For Windows 10/11**
+---
 
 ```bash
-cmd /c "npm install adm-zip fs-extra puppeteer"
+npm install
 ```
 
 ## Setup
 
-create `testhelper.user.json`
+create `testhelper.z.env`, at the same folder
 
 ```json
-{
-  "username": ""
-  "password": ""
-}
+CMS_USERNAME=
+CMS_PASSWORD=
+CMS_BASE_URL=
 ```
 
 ## Usage
 
 ```bash
-node testhelper.js ./.cph/.cpp_file_name.prob
+node start ./.cph/.cpp_file_name.prob
 ```
