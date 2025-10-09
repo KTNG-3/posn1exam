@@ -449,7 +449,14 @@ async function main() {
         return;
     }
 
-    const web: WebHelper = await WebHelper.launch(process.env.CMS_BASE_URL);
+    let self_BASE_URL = process.env.CMS_BASE_URL;
+    if (self_BASE_URL.endsWith("/") || self_BASE_URL.endsWith("\\"))
+    {
+        self_BASE_URL = self_BASE_URL.slice(0, -1);
+        console.log("[!] env.CMS_BASE_URL shoud not end with slash or backslash");
+    }
+
+    const web: WebHelper = await WebHelper.launch(self_BASE_URL);
 
     try {
         await web.login(process.env.CMS_USERNAME, process.env.CMS_PASSWORD);
