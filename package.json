@@ -4,7 +4,7 @@
   "description": "CMS helper",
   "main": "testhelper.js",
   "scripts": {
-    "start": "node ./src/testhelper.js",
+    "start": "node ./testhelper.js",
     "build": "npx tsc ./src/testhelper.ts --target esnext --module nodenext --skipLibCheck --removeComments"
   },
   "keywords": [],
