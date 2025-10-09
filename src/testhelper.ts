@@ -406,10 +406,6 @@ class WebHelper {
             let findOnce = false;
 
             for (const task of taskCollection) {
-                if (findOnce) {
-                    break;
-                }
-
                 const href = await task.evaluate(e => e.href);
 
                 if (usedHref.includes(href)) {
@@ -421,9 +417,8 @@ class WebHelper {
                 await this.downloadWebTask(href, folder_path);
                 await sleep(100);
 
-                await this.goto(contestUrl);
-
                 findOnce = true;
+                break;
             }
 
             if (!findOnce)
