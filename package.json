@@ -4,12 +4,12 @@
   "description": "CMS helper",
   "main": "testhelper.js",
   "scripts": {
-    "start": "node ./testhelper.js",
+    "start": "node ./src/testhelper.js",
     "build": "npx tsc ./src/testhelper.ts --target esnext --module nodenext --skipLibCheck --removeComments"
   },
   "keywords": [],
   "author": "Kawin Kaewnern",
-  "license": "ISC",
+  "license": "UNLICENSED",
   "dependencies": {
     "@types/adm-zip": "^0.5.7",
     "@types/fs-extra": "^11.0.4",
