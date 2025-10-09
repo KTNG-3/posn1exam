@@ -1,0 +1,23 @@
+{
+  "name": "testhelper",
+  "version": "1.0.0",
+  "description": "CMS helper",
+  "main": "testhelper.js",
+  "scripts": {
+    "start": "node ./testhelper.js",
+    "build": "npx tsc ./src/testhelper.ts --target esnext --module nodenext --skipLibCheck --removeComments"
+  },
+  "keywords": [],
+  "author": "Kawin Kaewnern",
+  "license": "ISC",
+  "dependencies": {
+    "@types/adm-zip": "^0.5.7",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^24.7.0",
+    "adm-zip": "^0.5.16",
+    "dotenv": "^17.2.3",
+    "fs-extra": "^11.3.2",
+    "puppeteer": "^24.23.0",
+    "typescript": "^5.9.3"
+  }
+}
