@@ -39,4 +39,5 @@ jobs:
                         package.json
                         src/testhelper.js
                     name: ${{ github.event.head_commit.message }}
+                    tag_name: ${{ github.ref_name }}
                     token: ${{ secrets.GITHUB_TOKEN }}
