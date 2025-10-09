@@ -24,7 +24,7 @@ npm install
 
 create `testhelper.z.env`, at the same folder
 
-```json
+```env
 CMS_USERNAME=
 CMS_PASSWORD=
 CMS_BASE_URL=
