@@ -33,5 +33,5 @@ CMS_BASE_URL=
 ## Usage
 
 ```bash
-node start ./.cph/.cpp_file_name.prob
+node ./testhelper.js ./.cph/.cpp_file_name.prob
 ```
